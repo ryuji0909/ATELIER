@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+* ::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: YakuHanMPs_Noto, 'Noto Serif JP', serif;
+    font-size: 11pt;
+    letter-spacing: 0.1em;
+    line-break: strict;
+}
+
+html{
+    /* フォントサイズの正確に */
+    -webkit-text-size-adjust: 100%;
+    /* 文字をシャープに */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* カーニングとリガチャ（合字）を調整 */
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+dt {
+    display: block;
+}
+
+
+/*------------header------------*/
+#header {
+    max-width: 1080px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+    padding: 10px;
+}
+
+#header img {
+    width: 220px;
+    display: block;
+}
+
+#header .nav-links {
+    display: flex;
+}
+
+#header ul li {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+#header a {
+    color: inherit;
+}
+#header a:hover {
+    opacity: 0.4;
+}
+
+.header-logo {
+    padding: 30px;
+}
+
+/*----------main--------------*/
+.container-list {
+    display: grid;
+    max-width: 1120px;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    justify-content: center;
+    column-gap: 40px; /*列間の指定*/
+    row-gap: 60px; /*行間の指定*/
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.container-list dt {
+    text-align: left;
+    font-size: 10pt;
+    letter-spacing: 0.1em;
+}
+
+/*-----------footer-----------*/
+#footer {
+    max-width: 1080px;
+    margin-top: 180px;
+    margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 9pt;
+}
+
+#footer p {
+    letter-spacing: 0.2em;
+}
+
+#footer a {
+    line-height: 5.6;
+}
+
+#g-nav ul {
+    display: none;
+}
+
+/*-----------レスポンシブ-----------*/
+
+/*------------スマホ----------------*/
+@media screen and (max-width: 599px) {
+    #header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        z-index: 10;
+        background-color: #FFFFFF;
+        padding-left: 21px;
+        padding-right: 19px;
+    }
+
+    .header-logo img {
+        width: 160px;
+    }
+    .container-list {
+        grid-template-columns: repeat(1, 100%);
+    }
+ }
+    
+
+
